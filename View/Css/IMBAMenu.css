@@ -15,15 +15,10 @@ line-height:1.5em;
 #nav a{
 display:block;
 padding:0px 5px;
-border:1px solid #333;
-color:#fff;
 text-decoration:none;
-background-color:#333;
 }
 
 #nav a:hover{
-background-color:#fff;
-color:#333;
 }
 
 #nav li{
