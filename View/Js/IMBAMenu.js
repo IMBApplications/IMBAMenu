@@ -34,6 +34,8 @@ function createImbaMenu(menuId, params){
     if (params.offsetV == null || isNaN(params.offsetV)){
         params.offsetV = "0";
     }
+    
+    //$(menuId).attr("class", "ui-dialog-titlebar ui-widget-header ui-corner-all");
 
     // Setup the CSS
     $(menuId).css({
@@ -135,7 +137,7 @@ function createImbaMenu(menuId, params){
 
 $(document).ready(function(){
     createImbaMenu("#nav", {
-        "orientation": "right",
+        "orientation": "left",
         "positionV": "top",
         "positionH": "right",
         "offsetH": 100,

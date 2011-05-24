@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>IMBAMenu</title>
+
         <!-- jQuery and jQuery UI -->
         <script type='text/javascript' src='Libs/jQuery/js/jquery-1.5.2.min.js'></script>
         <script type='text/javascript' src='Libs/jQuery/js/jquery-ui-1.8.10.custom.min.js'></script>
@@ -10,9 +11,19 @@
 
         <!-- Menu Script -->
         <script type='text/javascript' src='View/Js/IMBAMenu.js'></script>
+
+        <script type='text/javascript' >
+            $(function() {
+                $( "#dialog" ).dialog();
+            });
+        </script>
     </head>
 
     <body>
+        <div id="dialog" title="Basic dialog">
+            <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+        </div>
+
         <ul id="nav">
             <li><a href="#">1 Text</a></li>
             <li><a href="#">2 Text</a></li>
@@ -54,7 +65,5 @@
                 </ul>
             </li>
         </ul>
-
-
     </body>
 </html>
