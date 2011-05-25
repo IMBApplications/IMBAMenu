@@ -34,8 +34,9 @@ function createImbaMenu(menuId, params){
     if (params.offsetV == null || isNaN(params.offsetV)){
         params.offsetV = "0";
     }
-    
-    //$(menuId).attr("class", "ui-dialog-titlebar ui-widget-header ui-corner-all");
+
+    $(menuId + " ul ").attr("class", "ui-dialog-titlebar ui-widget-header ui-corner-all");
+    $(menuId).attr("class", "ui-dialog-titlebar ui-widget-header ui-corner-all");
 
     // Setup the CSS
     $(menuId).css({
@@ -44,12 +45,12 @@ function createImbaMenu(menuId, params){
         "list-style-type": "none",
         "list-style-position": "outside",
         "position": "fixed",
-        "line-height": "1.5em"
+        "line-height": "2.0em"
     });
 
     $(menuId + " a ").css({
         "display": "block",
-        "padding": "0px 5px",
+        "padding": "0px 10px",
         "text-decoration": "none"
     });
 
@@ -61,7 +62,7 @@ function createImbaMenu(menuId, params){
         "line-height": "1.5em",
         "position": "absolute",
         "display": "none",
-        "top": "1.5em"
+        "top": "2.1em"
     });
 
     $(menuId + " li ").css({
@@ -90,7 +91,7 @@ function createImbaMenu(menuId, params){
     if (params.orientation == "left"){
         $(menuId + " li ul ul ").css({
             // Change for other flow direction
-            "right": "90px",
+            "right": "111px",
             "margin": "0px 0 0 10px"
         });
     } else {
@@ -122,7 +123,7 @@ function createImbaMenu(menuId, params){
         });
     }
 
-    // Opera and IE Fix
+    // hover function
     $(menuId + " li ").hover(function(){
         $(this).find('ul:first').css({
             visibility: "visible",
@@ -137,10 +138,10 @@ function createImbaMenu(menuId, params){
 
 $(document).ready(function(){
     createImbaMenu("#nav", {
-        "orientation": "left",
+        "orientation": "right",
         "positionV": "top",
-        "positionH": "right",
-        "offsetH": 100,
-        "offsetV": 100
+        "positionH": "left",
+        "offsetH": 60,
+        "offsetV": 20
     });
 });
